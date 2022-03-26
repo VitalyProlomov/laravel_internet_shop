@@ -1,6 +1,9 @@
 @extends('layouts.app')
+@extends('topMenuInterface')
 
+@section('top_menu')
 @section('content')
+    <link rel = stylesheet href = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -20,4 +23,5 @@
         </div>
     </div>
 </div>
+@endsection
 @endsection

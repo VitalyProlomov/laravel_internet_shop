@@ -1,6 +1,37 @@
 @extends('layouts.app')
 
+{{--Top Menu--}}
+<style>
+    menu {
+        position: fixed
+    }
+</style>
+<div class="container" style=".menu">
+    <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="/mainPage" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="/userProfile" class="nav-link">User Profile</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Reviews</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="/shoppingBag" class="nav-link">Shopping Bag</a></li>
+        </ul>
+    </header>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Left Side Of Navbar -->
+        <ul class="navbar-nav me-auto">
 
+        </ul>
+
+        <!-- Right Side Of Navbar -->
+        <ul class="navbar-nav ms-auto">
+            <!-- Authentication Links -->
+
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost/register">Register</a>
+            </li>
+        </ul>
+    </div>
+</div>
 @section('content')
     <link rel = stylesheet href = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
 <div class="container">

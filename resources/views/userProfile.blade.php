@@ -1,4 +1,4 @@
-@extends('customMenuInterface.blade.php')
+@extends('topMenuInterface')
 
 @section('top_menu')
 
