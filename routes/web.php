@@ -14,9 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [MainController::class, 'mainPage']);
+Route::get(
+    '/', [MainController::class, 'mainPage']
+);
 
-Route::get('/userProfile',[MainController::class, 'userProfile']);
+Route::get(
+    '/userProfile',[MainController::class, 'userProfile']);
 
 Route::get('/mainPage', [MainController::class, 'mainPage']);
 
@@ -24,11 +27,16 @@ Route::get('/shoppingBag', [MainController::class, 'shoppingBag']);
 
 Route::post('/addProduct/{productToAdd}', function ($productToAdd = "l") {
     dd($productToAdd);
-});
+})->name('addProduct');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('/product/search', function () {
+
+})->name('productSearch');
+
 
 
 // Authentication routes

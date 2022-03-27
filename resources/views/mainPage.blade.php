@@ -1,6 +1,11 @@
 @extends('topMenuInterface')
 
 @section('top_menu')
+
+    <form method="post" action = {{ route('productSearch')}}>
+        @csrf
+        <input type = "search" placeholder="Search Products">
+    </form>
 <div style="text-align: center;"><h1>Catalog</h1></div>
 <div class="album py-5 bg-light">
     <div class="container">
@@ -10,13 +15,12 @@
                 <div class="card shadow-sm">
                     <img src="/orangeCardsPhoto.jpg" alt="Photo will be updated soon" width="100%" height="225">
 
-                        <title>Pitbull</title>
+                        <title></title>
                         <text x="50%" y="50%" fill="#eceeef" dy=".3em">aklnjnm</text></svg>
 
                     <div class="card-body">
                         <p class="card-text">Pitbul</p>
                         <div class="d-flex justify-content-between align-items-center">
-
                             <form method="post" action = "/addProduct/k">
                                 @csrf
                                 <button type="submit" color="#fefefe" class="btn btn-sm btn-outline-secondary">Add To Shopping Bag</button>
