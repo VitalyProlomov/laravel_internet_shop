@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Product;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,9 +25,19 @@ Route::get('/mainPage', [MainController::class, 'mainPage']);
 
 Route::get('/shoppingBag', [MainController::class, 'shoppingBag']);
 
-Route::post('/addProduct/{productToAdd}', function ($productToAdd = "l") {
-    dd($productToAdd);
-})->name('addProduct');
+// Adding product to the shopping basket.
+Route::post(
+    '/addProduct',[\App\Http\Controllers\ProductController::class, 'submit']
+)->name('addProduct');
+
+
+Route::get(
+    '/getProduct',[\App\Http\Controllers\ProductController::class, 'allData']
+)->name('getProduct');
+//Route::post(
+//    '/addProduct/{productToAdd}',[\App\Http\Controllers\ProductController::class, 'submit']
+//)->name('addProduct');
+
 
 Auth::routes();
 
@@ -39,26 +49,3 @@ Route::post('/product/search', function () {
 
 
 
-// Authentication routes
-//
-//Route::name('user.')->group(function() {
-//    // private - is the name of the page where only registered users can get to.
-//    Route::view('/private', 'private')->middleware('auth')->name('private');
-//
-//    Route::get('/login', function () {
-//        return view('login');
-//    })->name('login');
-//
-//    //Route::post('/login', [MainController::class])
-//
-//    // Route::get('/logout', []->);
-//
-//    Route::get('/registration', function () {
-//        if (Auth::check()) {
-//            return redirect(route('user/private'));
-//        }
-//        return view('registration');
-//    })->name('registration');
-//
-//    // Route::post('/registration', []);
-//});

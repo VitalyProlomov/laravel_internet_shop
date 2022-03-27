@@ -19,9 +19,9 @@ class MainController extends Controller
         return view('shoppingBag');
     }
 
-    function addProductToShoppingBag($productToAdd) {
-        dd($productToAdd);
-    }
+//    function addProductToShoppingBag($productToAdd) {
+//        dd($productToAdd);
+//    }
 
     function category($category) {
         $categoryObject = Category::where('code', $category)->first();
