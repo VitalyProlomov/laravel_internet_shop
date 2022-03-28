@@ -18,10 +18,10 @@
 <div
     style="text-align: center;"><h1>User Profile</h1>
 </div>
-
+<h5>Email: {{auth()->user()->email}}</h5>
 <h5> Purchases History: </h5>
-{{--@foreach()--}}
-{{--    @endforeach()--}}
+{{auth()->user()->id}}
+
 </body>
 </html>
 @endsection

@@ -12,6 +12,8 @@ class MainController extends Controller
     }
 
     function userProfile() {
+        $id = auth()->user()->id;
+
         return view('userProfile');
     }
 

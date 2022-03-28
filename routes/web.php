@@ -29,16 +29,14 @@ Route::get('/catalog', [\App\Http\Controllers\ProductController::class,'allData'
 
 // Adding product to the shopping basket.
 Route::post(
-    '/addProduct',[\App\Http\Controllers\ProductController::class, 'submit']
+    '/addProduct',[\App\Http\Controllers\ProductController::class, 'addProductToBag']
 )->name('addProductToBag');
 
 
-Route::get(
-    '/getProduct',[\App\Http\Controllers\ProductController::class, 'allData']
-)->name('getProduct');
-//Route::post(
-//    '/addProduct/{productToAdd}',[\App\Http\Controllers\ProductController::class, 'submit']
-//)->name('addProduct');
+//Route::get(
+//    '/getProduct',[\App\Http\Controllers\ProductController::class, 'allData']
+//)->name('getProduct');
+
 
 
 Auth::routes();

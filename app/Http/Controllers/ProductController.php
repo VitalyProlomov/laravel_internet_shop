@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use http\Client\Curl\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -32,6 +33,10 @@ class ProductController extends Controller
     }
 
 
+    public function addProductToBag(Request $request) {
+        // current_user->shoppingBag->append(request + ',');
+        return view('catalog');
+    }
 
     public function allData() {
         return view('catalog', ['data' => Product::all()]);
