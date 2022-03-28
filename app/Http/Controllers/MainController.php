@@ -23,8 +23,8 @@ class MainController extends Controller
 //        dd($productToAdd);
 //    }
 
-    function category($category) {
-        $categoryObject = Category::where('code', $category)->first();
-        return view('category', compact('category'));
-    }
+//    function category($category) {
+//        $categoryObject = Category::where('code', $category)->first();
+//        return view('category', compact('category'));
+//    }
 }

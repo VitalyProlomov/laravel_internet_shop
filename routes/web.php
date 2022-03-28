@@ -25,10 +25,12 @@ Route::get('/mainPage', [MainController::class, 'mainPage']);
 
 Route::get('/shoppingBag', [MainController::class, 'shoppingBag']);
 
+Route::get('/catalog', [\App\Http\Controllers\ProductController::class,'allData']);
+
 // Adding product to the shopping basket.
 Route::post(
     '/addProduct',[\App\Http\Controllers\ProductController::class, 'submit']
-)->name('addProduct');
+)->name('addProductToBag');
 
 
 Route::get(

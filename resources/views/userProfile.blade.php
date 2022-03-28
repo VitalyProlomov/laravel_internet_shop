@@ -12,15 +12,13 @@
     <title>Document</title>
 </head>
 <body>
-<div style="text-align: center;"><h1>User Profile</h1>
-<h5>Name: </h5>
-<h5>Date of registration:</h5>
-<h5>List of bought products:</h5>
+<div
+    style="text-align: center;"><h1>User Profile</h1>
 </div>
-<img class="fit-picture"
-     src="https://www.prismamarket.ru/upload/iblock/0a3/2000669800001.jpg"
-     alt="Grapefruit slice atop a pile of other slices">
 
+<h5> Purchases History: </h5>
+{{--@foreach()--}}
+{{--    @endforeach()--}}
 </body>
 </html>
 @endsection

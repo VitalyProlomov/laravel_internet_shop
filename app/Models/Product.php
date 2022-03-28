@@ -9,4 +9,5 @@ class Product extends Model
 {
     // ? was auto generated.
     use HasFactory;
+
 }
