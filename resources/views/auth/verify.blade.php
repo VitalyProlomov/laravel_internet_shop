@@ -1,5 +1,7 @@
 @extends('layouts.app')
+@extends('topMenuInterface')
 
+@section('top_menu')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -25,4 +27,5 @@
         </div>
     </div>
 </div>
+@endsection
 @endsection

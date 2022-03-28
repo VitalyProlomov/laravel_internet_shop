@@ -1,37 +1,5 @@
-@extends('layouts.app')
-{{--Top Menu--}}
-<style>
-    menu {
-        position: fixed
-    }
-</style>
-<div class="container" style=".menu">
-    <header class="d-flex justify-content-center py-3">
-        <ul class="nav nav-pills">
-            <li class="nav-item"><a href="/mainPage" class="nav-link active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="/userProfile" class="nav-link">User Profile</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Reviews</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="/shoppingBag" class="nav-link">Shopping Bag</a></li>
-        </ul>
-    </header>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- Left Side Of Navbar -->
-        <ul class="navbar-nav me-auto">
-
-        </ul>
-
-        <!-- Right Side Of Navbar -->
-        <ul class="navbar-nav ms-auto">
-            <!-- Authentication Links -->
-
-            <li class="nav-item">
-                <a class="nav-link" href="http://localhost/register">Register</a>
-            </li>
-        </ul>
-    </div>
-</div>
-
+@extends('topMenuInterface')
+@section('top_menu')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -102,3 +70,4 @@
     </div>
 </div>
 @endsection
+{{-- Used to write all common interface elements, so that the code is not repeated --}}
