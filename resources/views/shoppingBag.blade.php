@@ -9,8 +9,8 @@
 
                 <div class="col" style="size: 500px">
                     <div class="card shadow-sm">
-                        <img src={{\App\Models\Product::find($index)->image}} alt="Unavailable" width="350"
-                             height="225">
+                        <img src={{\App\Models\Product::find($index)->image}} width="350"
+                             height="225" alt="Photo unavailable">
 
                         <text x="50%" y="50%" fill="#eceeef" dy=".3em"
                               align="center">{{\App\Models\Product::find($index)->name}}</text>
@@ -26,7 +26,7 @@
                     @endif
                     @endforeach
                     @else
-                        <h4>Please register to see the shopping basket<h4>
+                        <h4>Please register to see the shopping basket</h4>
             @endif
             {{--{{\App\Models\Product::all()->count()}}--}}
             {{--        {{\App\Models\Product::allData()}}--}}
