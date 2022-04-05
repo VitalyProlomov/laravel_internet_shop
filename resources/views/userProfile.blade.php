@@ -18,9 +18,10 @@
 <div
     style="text-align: center;"><h1>User Profile</h1>
 </div>
+<div class = "container">
 <h5>Email: {{auth()->user()->email}}</h5>
 <h5> Purchases History: </h5>
-{{auth()->user()->id}}
+</div>
 
 </body>
 </html>

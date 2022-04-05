@@ -25,14 +25,22 @@ Route::get('/mainPage', [MainController::class, 'mainPage']);
 
 Route::get('/shoppingBag', [MainController::class, 'shoppingBag']);
 
-Route::get('/catalog', [\App\Http\Controllers\ProductController::class,'allData']);
+Route::get('/catalog', [\App\Http\Controllers\ProductController::class,'allData'])->name('/catalog');
+
+Route::get('/adminPanel', [\App\Http\Controllers\UserController::class,'allData']);
+// Adding product to the shopping basket.
+//Route::post(
+//    '/addProduct',[\App\Http\Controllers\ProductController::class, 'addProductToBag']
+//)->name('addProductToBag');
 
 // Adding product to the shopping basket.
 Route::post(
-    '/addProduct',[\App\Http\Controllers\ProductController::class, 'addProductToBag']
-)->name('addProductToBag');
+    '/addProduct/{id}', [\App\Http\Controllers\UserController::class, 'addProduct']
+);
 
-
+Route::post(
+    '/deleteUser', [\App\Http\Controllers\UserController::class, 'deleteUser']
+);
 //Route::get(
 //    '/getProduct',[\App\Http\Controllers\ProductController::class, 'allData']
 //)->name('getProduct');

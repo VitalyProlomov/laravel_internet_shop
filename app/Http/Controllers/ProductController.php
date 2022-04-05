@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Product;
-use http\Client\Curl\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use phpDocumentor\Reflection\Types\String_;
 
 class ProductController extends Controller
 {
@@ -32,11 +33,6 @@ class ProductController extends Controller
         return redirect()->route('/catalog');
     }
 
-
-    public function addProductToBag(Request $request) {
-        // current_user->shoppingBag->append(request + ',');
-        return view('catalog');
-    }
 
     public function allData() {
         return view('catalog', ['data' => Product::all()]);

@@ -7,7 +7,8 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
                 @foreach($data as $product)
-                    <form method="post" action = "{{route('addProductToBag')}}" >
+                    {{--action must be the following: method = "post" action = "/addProduct/{{$product->id}}}", but currently I can not fix the bugs with that link--}}
+                    <form method = "post" action = "/addProduct/{{$product->id}}">
                         @csrf
                         <div class="col">
                             <div class="card shadow-sm" >
@@ -20,6 +21,7 @@
                                     Price: {{$product->price}}$
                                     <div class="d-flex justify-content-between align-items-center">
                                         <button type="submit" color="#fefefe" class="btn btn-sm btn-outline-secondary" >Add To Shopping Bag</button>
+{{--                                        <a class = "btn button btn-outline-secondary" href = "/addProduct"></a>--}}
                                     </div>
                                 </div>
 

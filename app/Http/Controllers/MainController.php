@@ -18,7 +18,7 @@ class MainController extends Controller
     }
 
     function shoppingBag() {
-        return view('shoppingBag');
+        return view('shoppingBag', );
     }
 
 //    function addProductToShoppingBag($productToAdd) {
