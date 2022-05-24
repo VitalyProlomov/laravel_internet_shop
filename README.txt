@@ -17,5 +17,7 @@ Also Shopping bag need to be developed and finalized - I need to add the possibi
 actually buy the products from the bag and delete/change amount of the products from
 the shopping bag.
 
+Moreover, I definetely need to add pages of every product with information about them.
+
 After adding all the features described above I can also make the Home tab more intersting,
 since now it`s almost empty.
