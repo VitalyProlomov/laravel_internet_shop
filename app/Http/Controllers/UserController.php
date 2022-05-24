@@ -12,7 +12,6 @@ class UserController extends Controller
 
     public function deleteUser($id)
     {
-        dd($id);
         User::find($id)->delete();
     }
 
@@ -26,6 +25,9 @@ class UserController extends Controller
     public function addProduct($id)
     {
         $i = Auth()->user();
+        if ($i == null) {
+            return redirect()->route('/shoppingBag');
+        }
 
 
         if ($i->current_bag == null) {

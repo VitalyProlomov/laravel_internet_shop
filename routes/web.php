@@ -23,7 +23,7 @@ Route::get(
 
 Route::get('/mainPage', [MainController::class, 'mainPage']);
 
-Route::get('/shoppingBag', [MainController::class, 'shoppingBag']);
+Route::get('/shoppingBag', [MainController::class, 'shoppingBag'])->name('/shoppingBag');
 
 Route::get('/catalog', [\App\Http\Controllers\ProductController::class,'allData'])->name('/catalog');
 

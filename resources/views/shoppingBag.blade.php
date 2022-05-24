@@ -1,32 +1,50 @@
 @extends('topMenuInterface')
 
 @section('top_menu')
+
     @if (Auth()->user() != null && Auth()->user()->current_bag != null)
+        <ul>
+        <h1 align="center" style="">Shopping Bag</h1>
+        <br>
+        <hr>
+        <li style=" float: left;
+        list-style-type: none;
+        padding-left: 100px;
+        padding-right: 25%;">Item</li>
+        <li style=" float: left;
+        list-style-type: none;
+        padding-left: 100px;
+        padding-right: 25%;">Price</li>
+            </h4>
+        </ul>
+        <br>
+        <hr>
         @foreach(preg_split('/\s+/', Auth()->user()->current_bag) as $index)
             @if (\App\Models\Product::all()->count() >= $index && \App\Models\Product::find($index) != null)
-                {{\App\Models\Product::find($index)}}
-                <br><br><br>
 
-                <div class="col" style="size: 500px">
-                    <div class="card shadow-sm">
+                <br>
+                <div class="col" style="size: 200px; display: inline">
+                    <div class="card shadow-sm" style="width: 350px">
                         <img src={{\App\Models\Product::find($index)->image}} width="350"
                              height="225" alt="Photo unavailable">
+                    </div>
 
                         <text x="50%" y="50%" fill="#eceeef" dy=".3em"
-                              align="center">{{\App\Models\Product::find($index)->name}}</text>
+                              align="left">{{\App\Models\Product::find($index)->name}}</text>
+
 
                         <div class="card-body">
-                            <p class="card-text">{{\App\Models\Product::find($index)->description}}</p>
-                            Price: {{\App\Models\Product::find($index)->price}}$
-
+                           {{\App\Models\Product::find($index)->description}}
                         </div>
-
+{{--                    ${{\App\Models\Product::find($index)->price}}--}}
                     </div>
+
+
 
                     @endif
                     @endforeach
                     @else
-                        <h4>Please register to see the shopping basket</h4>
+                        <h4>Please register to use the shopping basket</h4>
             @endif
             {{--{{\App\Models\Product::all()->count()}}--}}
             {{--        {{\App\Models\Product::allData()}}--}}
